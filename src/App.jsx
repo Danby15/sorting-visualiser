@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar.jsx'
+import SortingVisualiser from './components/SortingVisualiser.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,7 +8,9 @@ function App() {
   return (
     <>
       <NavBar />
-
+      <div className="h-screen w-full bg-gray-100">
+        <SortingVisualiser />
+      </div>
     </>
   )
 }
