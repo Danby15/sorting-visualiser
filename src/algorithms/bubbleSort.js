@@ -1,4 +1,4 @@
-function bubbleSort(input) {
+export function bubbleSort(input) {
     const arr = [...input]; // Create a copy of the input array
     const steps = [];
     for (let i = 0; i < arr.length - 1; i++) {
