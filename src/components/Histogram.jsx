@@ -12,7 +12,7 @@ export default function Histogram({ data }) {
 
       {data.map((value, index) => (
         <div 
-        className="bg-red-800 w-1/6 border-5 border-black-100"
+        className="bg-red-800 w-1/6"
         style={{
             height: `${(value / maxValue) * 100}%`,
           }}

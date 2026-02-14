@@ -1,7 +1,6 @@
 import Histogram from './Histogram.jsx';
 import { useState, useEffect } from 'react'
-
-
+import { shuffleArray } from "../algorithms/shuffle";
 
 export default function SortingVisualiser() {
   const [array, setArray] = useState([1,2,3,4,5,6,7,8,9,10]);
@@ -16,7 +15,7 @@ export default function SortingVisualiser() {
     <div className="p-12">
       <div className="flex text-3xl gap-10">
         <p className="">BubbleSort</p>
-        <button className="hover:text-gray-300 cursor-pointer ml-15">Shuffle</button>
+        <button onClick={() => setArray(shuffleArray(array))} className="hover:text-gray-300 cursor-pointer ml-15">Shuffle</button>
         <button className="hover:text-gray-300 cursor-pointer">Sort</button>
 
         {/* Number of elements*/}
@@ -24,8 +23,8 @@ export default function SortingVisualiser() {
           <h1>Number of elements: {size}</h1>
           <input
           type="range"
-          min="5"
-          max="100"
+          min="10"
+          max="500"
           value={size}
           onChange={(e) => setSize(Number(e.target.value))}
           className="mb-4"
