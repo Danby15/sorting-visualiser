@@ -8,9 +8,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <div className="h-screen w-full bg-gray-100">
-        <SortingVisualiser />
-      </div>
+      <SortingVisualiser />
       <Footer />
     </>
   )

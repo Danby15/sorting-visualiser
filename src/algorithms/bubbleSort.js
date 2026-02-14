@@ -3,6 +3,7 @@ function bubbleSort(input) {
     const steps = [];
     for (let i = 0; i < arr.length - 1; i++) {
         for (let j = 0; j < arr.length - i - 1; j++) {
+            
             // add comparison step
             steps.push({ type: 'compare', indices: [j, j + 1], array : [...arr] });
 
@@ -14,7 +15,7 @@ function bubbleSort(input) {
 
         }
     }
-    
+
     // final step
     steps.push({ type: 'sorted', array: [...arr] });
     return steps;
